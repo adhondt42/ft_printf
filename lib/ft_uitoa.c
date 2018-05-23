@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:44:47 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:25:23 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 14:22:22 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char			*ft_uitoa(uintmax_t n)
 	if ((num = (char *)malloc(sizeof(char) * count + 1)) == NULL)
 		return (NULL);
 	num[count] = '\0';
-	while (count-- >= 0)
+	while (count-- > 0)
 	{
 		num[count] = (n % 10) + '0';
 		n /= 10;

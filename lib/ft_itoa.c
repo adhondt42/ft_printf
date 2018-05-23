@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:22:44 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:22:46 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 14:31:14 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char		*ft_itoa(int n)
 	while (tmp /= 10)
 		len++;
 	itoa_negatif(&n, &negatif, &len);
-	if ((new = (char *)malloc(len * sizeof(char))) == NULL)
+	if ((new = (char *)malloc(sizeof(char) * (len + 1))) == NULL)
 		return (NULL);
 	new[len] = '\0';
 	while (len--)
