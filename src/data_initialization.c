@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:17:48 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 13:09:10 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/23 13:12:10 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void			init_f(void (*f[14])(t_pm *, void *))
 	f[0] = print_s;
 	f[1] = nada;
 	f[2] = print_p;
-	f[3] = nada;
+	f[3] = print_d;
 	f[4] = print_dd;
 	f[5] = print_i;
 	f[6] = print_o;
