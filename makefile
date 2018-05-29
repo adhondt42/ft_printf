@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 21:33:32 by adhondt           #+#    #+#              #
-#    Updated: 2018/05/22 21:33:34 by adhondt          ###   ########.fr        #
+#    Updated: 2018/05/28 16:42:57 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 CC = gcc
 
-FLAGS = -Wall -Wextra -Werror -Fsanitize
+FLAGS = -Wall -Wextra -Werror
 
 CPP_FLAGS = -Iinclude
 
