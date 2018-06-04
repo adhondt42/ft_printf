@@ -35,8 +35,10 @@ typedef struct	s_pm
 
 int				ft_printf(const char *str, ...);
 char			*apply_flags(t_pm *s, char *str);
+char			*apply_flags_d(t_pm *s, char *str);
 char			*apply_min_size(t_pm *s, char *str);
 char			*apply_precision(t_pm *s, char *str);
+char			*apply_precision_d(t_pm *s, char *str);
 char			*get_size_modified(t_pm *s, void *elem, char c);
 void			init_s(t_pm **s);
 void			init_f(void (*f[14])(t_pm *, void *));

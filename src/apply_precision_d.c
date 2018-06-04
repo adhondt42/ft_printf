@@ -12,19 +12,12 @@
 
 #include "../inc/ft_printf.h"
 
-char		*o_exception(char *str)
-{
-	free(str);
-	return (ft_strdup(""));
-}
-
-char		*apply_precision_ii(t_pm *s, char *str)
+char		*apply_precision_d_ii(t_pm *s, char *str)
 {
 	char *ret;
 
 	if (s->precision > 0)
 	{
-
 		if ((ret = ft_memalloc_c(s->precision, '0')) == NULL)
 		{
 			ft_putstr("\nMalloc Error\n");
@@ -40,7 +33,7 @@ char		*apply_precision_ii(t_pm *s, char *str)
 	return (ret);
 }
 
-char		*apply_precision(t_pm *s, char *str)
+char		*apply_precision_d(t_pm *s, char *str)
 {
 	char	*ret;
 	int		neg;
@@ -49,7 +42,7 @@ char		*apply_precision(t_pm *s, char *str)
 	if (ft_strlen(str) == 0 && (s->i == 6 || s->i == 7) && s->precision >= 0)
 		ret = ft_strdup("");
 	else if (ft_strlen(str) == 0)
-		ret = apply_precision_ii(s, str);
+		ret = apply_precision_d_ii(s, str);
 	else if (s->precision > 0 && s->precision > (ft_strlen(str) - neg))
 	{
 		ret = ft_strcnew(s->precision + neg, '0');

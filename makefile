@@ -29,7 +29,7 @@ OBJLIB_PATH = ./obj
 SRC_NAME =	apply_flags.c apply_min_size.c apply_precision.c \
 			apply_size_modifier.c data_initialization.c get_output_options.c \
 			main.c print_c.c print_d_dd_u_i.c print_p.c print_s.c \
-			print_x_xx_o_modulo.c \
+			print_x_xx_o_modulo.c apply_precision_d.c apply_flags_d.c \
 
 
 LIB_NAME = 	ft_atoi.c ft_itoa.c ft_isdigit.c ft_strlen.c ft_memalloc.c \
