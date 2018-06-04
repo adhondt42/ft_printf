@@ -17,7 +17,7 @@ void		print_d(t_pm *s, void *elem)
 	char	*str;
 
 	str = get_size_modified(s, elem, 'd');
-	str = apply_precision(s, str);
+	str = apply_precision_d(s, str);
 	str = apply_flags_d(s, str);
 	str = apply_min_size(s, str);
 	s->ret += ft_strlen(str);

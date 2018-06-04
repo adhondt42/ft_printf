@@ -19,7 +19,7 @@ char		*apply_flags_d_ii(t_pm *s, char *str, int *i)
 	(void)s;
 	ret = NULL;
 	if (str[0] == '0' && str[1] == '\0' && s->precision >= 0 &&
-	(s->i != 5 || (s->i == 5 && s->precision <= 0)))
+	((s->i != 5 && s->i != 3) || ((s->i == 5 && s->precision <= 0) || (s->i == 3 && s->precision <= 0))))
 		ret = ft_chardup('+');
 	else
 		ret = add_frontchar(str, '+');

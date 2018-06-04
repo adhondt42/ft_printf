@@ -6,10 +6,7 @@ int i;
 int j;
 char *str;
 
-	str = "TEST :!%+-.1zi!\n";
-	i = ft_printf(str, 0);
-	j = printf(str, 0);
-	str = "TEST :!et %+.i et!\n";
+	str = "TEST :42%+02.1zd42!\n";
 	i = ft_printf(str, 0);
 	j = printf(str, 0);
 	printf("i:%d, j:%d\n", i, j);
