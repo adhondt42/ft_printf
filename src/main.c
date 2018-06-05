@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:41 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 11:43:41 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 11:53:03 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int			check_flag(char *str, char *flg)
 	while (pos_in_str(str[i], flg) < 0 && str[i] &&
 			(pos_in_str(str[i], "hljz") >= 0 || !ft_isalpha(str[i])))
 		i++;
-	if (str[i] == '\0')
+	if (str[i] == '\0' && str[i] != '%')
 		return (-1);
-	else if (pos_in_str(str[i], flg) >= 0)
+	else if (pos_in_str(str[i], flg) >= 0 && str[i] != '%')
 		return (1);
 	return (0);
 }
