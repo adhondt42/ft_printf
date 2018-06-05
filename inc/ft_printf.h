@@ -6,15 +6,13 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:31 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 13:43:35 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 15:02:23 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <stdio.h>
 # include <stdarg.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

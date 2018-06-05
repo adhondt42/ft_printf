@@ -6,11 +6,12 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:20:22 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 13:44:08 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 17:04:08 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
+#include <stdio.h>
 
 char		*add_ox(char *str, char c)
 {
@@ -36,11 +37,33 @@ char		*add_ox(char *str, char c)
 	return (ret);
 }
 
+int			test(t_pm *s, void *elem)
+{
+	int	bouh;
+
+	if (s->size_modif == 'H')
+		bouh = (unsigned char)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'h')
+		bouh = (unsigned short)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'L')
+		bouh = (unsigned long long)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'l')
+		bouh = (unsigned long)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'j')
+		bouh = (uintmax_t)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'z')
+		bouh = (size_t)elem == 0 ? 0 : 1;
+	else
+		bouh = (int)elem == 0 ? 0 : 1;
+	return (bouh);
+}
+
 void		print_x(t_pm *s, void *elem)
 {
 	char	*str;
-	char	*segfault;
+	int		i;
 
+	i = test(s, elem);
 	str = get_size_modified(s, elem, 'x');
 	str = apply_precision(s, str);
 	str = apply_flags(s, str);
@@ -49,13 +72,11 @@ void		print_x(t_pm *s, void *elem)
 		s->exception = 1;
 		str = apply_min_size_x(s, str);
 	}
-	segfault = ft_strtrim(str);
-	if (s->flags[0] == '#' && ft_strcmp(segfault, "0") != 0 &&
-			ft_strcmp(str, "") != 0)
+	if (s->flags[0] == '#' && i
+			&& ft_strcmp(str, "") != 0)
 		str = add_ox(str, 'x');
 	else if (ft_strcmp(str, "") == 0 && s->precision > 0)
 		str = ft_strdup_f("0", str);
-	free(segfault);
 	str = apply_min_size_x(s, str);
 	s->ret += ft_strlen(str);
 	ft_putstr(str);

@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:44:47 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/17 16:27:19 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 16:44:21 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char					*ft_uitoa_base(unsigned int value, int base, int up)
 
 	count = 0;
 	temp = value;
+	if (!value)
+		return (ft_strdup("0"));
 	while (temp != 0)
 	{
 		count++;
