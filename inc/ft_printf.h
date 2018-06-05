@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:31 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 15:02:23 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 17:50:48 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+
+
+#include <stdio.h>
 
 typedef struct	s_pm
 {
@@ -34,6 +38,7 @@ typedef struct	s_pm
 int				ft_printf(const char *str, ...);
 char			*apply_flags(t_pm *s, char *str);
 char			*apply_flags_d(t_pm *s, char *str);
+char			*apply_flags_u(t_pm *s, char *str);
 char			*apply_min_size(t_pm *s, char *str);
 char			*apply_min_size_x(t_pm *s, char *str);
 char			*apply_precision(t_pm *s, char *str);

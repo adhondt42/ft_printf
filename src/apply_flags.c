@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:17:28 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 12:52:28 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 17:45:43 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char		*apply_flags(t_pm *s, char *str)
 	else if (s->flags[3] == '+' && str[0] != '-' && s->i != 10 && s->i != 11 &&
 			s->i >= 0)
 		ret = apply_flags_ii(s, str, &i);
-	else if (str[0] == '0' && str[1] == '\0' && s->precision >= 0)
+	else if (str[0] == '0' && str[1] == '\0' && s->precision >= 0 && s->i != 8)
 		ret = ft_chardup('\0');
 	else
 		ret = ft_strdup(str);

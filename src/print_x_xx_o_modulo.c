@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:20:22 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 17:04:08 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 17:07:35 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,21 +86,23 @@ void		print_x(t_pm *s, void *elem)
 void		print_xx(t_pm *s, void *elem)
 {
 	char	*str;
+	int		i;
 
+	i = test(s, elem);
 	str = get_size_modified(s, elem, 'X');
 	str = apply_precision(s, str);
 	str = apply_flags(s, str);
-	if (s->precision < 0 && ft_strcmp(str, "0") != 0)
+	if (s->precision < 0)
 	{
 		s->exception = 1;
-		str = apply_min_size(s, str);
+		str = apply_min_size_x(s, str);
 	}
-	if (s->flags[0] == '#' && ft_strcmp(str, "0") != 0 &&
-			ft_strcmp(str, "") != 0)
+	if (s->flags[0] == '#' && i
+			&& ft_strcmp(str, "") != 0)
 		str = add_ox(str, 'X');
 	else if (ft_strcmp(str, "") == 0 && s->precision > 0)
 		str = ft_strdup_f("0", str);
-	str = apply_min_size(s, str);
+	str = apply_min_size_x(s, str);
 	s->ret += ft_strlen(str);
 	ft_putstr(str);
 	free(str);

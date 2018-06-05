@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:18 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 16:05:57 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 17:51:49 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void		print_u(t_pm *s, void *elem)
 		s->flags[4] = '.';
 	if (s->flags[3] == '+')
 		s->flags[3] = '.';
-	str = apply_flags(s, str);
+	str = apply_flags_u(s, str);
 	str = apply_min_size(s, str);
 	s->ret += ft_strlen(str);
 	ft_putstr(str);
