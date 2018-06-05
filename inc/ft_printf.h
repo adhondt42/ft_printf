@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:31 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 20:55:17 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 20:57:11 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-
-
-#include <stdio.h>
 
 typedef struct	s_pm
 {

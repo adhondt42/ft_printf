@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 20:07:15 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 20:21:48 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 20:56:55 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	inteq(int a, int b, int c, int ref)
 {
-		if (a == ref || b == ref || c == ref)
-			return (1);
+	if (a == ref || b == ref || c == ref)
+		return (1);
 	return (0);
 }
