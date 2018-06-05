@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:41 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 11:42:35 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 11:43:41 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,10 @@ int			ft_printf(const char *str, ...)
 
 	ret = 0;
 	va_start(va, str);
-	i = -1;
+	i = -1;/*
 	printf("ARG:%s || ", str);
-	printf("-%d-\n", va_arg(va, int));
-/*	while (str[++i])
+	printf("-%d-\n", va_arg(va, int));*/
+	while (str[++i])
 	{
 		if (str[i] == '%')
 		{
@@ -83,6 +83,6 @@ int			ft_printf(const char *str, ...)
 		}
 		else
 			(ret++) ? ft_putchar(str[i]) : ft_putchar(str[i]);
-	}*/
+	}
 	return (ret);
 }
