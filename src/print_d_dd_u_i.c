@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:18 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 17:51:49 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 19:05:44 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void		print_d(t_pm *s, void *elem)
 	char	*str;
 
 	str = get_size_modified(s, elem, 'd');
-	str = apply_precision_d(s, str);
+	str = apply_precision(s, str);
 	str = apply_flags_d(s, str);
 	str = apply_min_size(s, str);
 	s->ret += ft_strlen(str);
@@ -59,9 +59,10 @@ void		print_dd(t_pm *s, void *elem)
 {
 	char	*str;
 
+	s->i = 3;
 	str = get_size_modified(s, elem, 'D');
 	str = apply_precision(s, str);
-	str = apply_flags(s, str);
+	str = apply_flags_d(s, str);
 	str = apply_min_size(s, str);
 	s->ret += ft_strlen(str);
 	ft_putstr(str);

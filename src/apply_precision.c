@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 18:28:47 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 16:00:52 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 19:01:34 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ char		*apply_precision_ii(t_pm *s, char *str)
 
 	if (s->precision > 0)
 	{
-
 		if ((ret = ft_memalloc_c(s->precision, '0')) == NULL)
 		{
 			ft_putstr("\nMalloc Error\n");
@@ -47,7 +46,9 @@ char		*apply_precision(t_pm *s, char *str)
 
 	neg = (str[0] == '-') ? 1 : 0;
 	if (ft_strlen(str) == 0 && (s->i == 6 || s->i == 7) && s->precision >= 0)
+	{
 		ret = ft_strdup("");
+	}
 	else if (ft_strlen(str) == 0)
 		ret = apply_precision_ii(s, str);
 	else if (s->precision > 0 && s->precision > (ft_strlen(str) - neg))
