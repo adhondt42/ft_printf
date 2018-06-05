@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:20:22 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:20:36 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 13:44:08 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ char		*add_ox(char *str, char c)
 void		print_x(t_pm *s, void *elem)
 {
 	char	*str;
+	char	*segfault;
 
 	str = get_size_modified(s, elem, 'x');
 	str = apply_precision(s, str);
@@ -46,14 +47,16 @@ void		print_x(t_pm *s, void *elem)
 	if (s->precision < 0)
 	{
 		s->exception = 1;
-		str = apply_min_size(s, str);
+		str = apply_min_size_x(s, str);
 	}
-	if (s->flags[0] == '#' && ft_strcmp(str, "0") != 0 &&
+	segfault = ft_strtrim(str);
+	if (s->flags[0] == '#' && ft_strcmp(segfault, "0") != 0 &&
 			ft_strcmp(str, "") != 0)
 		str = add_ox(str, 'x');
 	else if (ft_strcmp(str, "") == 0 && s->precision > 0)
 		str = ft_strdup_f("0", str);
-	str = apply_min_size(s, str);
+	free(segfault);
+	str = apply_min_size_x(s, str);
 	s->ret += ft_strlen(str);
 	ft_putstr(str);
 	free(str);

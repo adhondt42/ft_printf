@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 21:33:32 by adhondt           #+#    #+#              #
-#    Updated: 2018/05/28 16:42:57 by adhondt          ###   ########.fr        #
+#    Updated: 2018/06/05 13:43:04 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC_NAME =	apply_flags.c apply_min_size.c apply_precision.c \
 			apply_size_modifier.c data_initialization.c get_output_options.c \
 			main.c print_c.c print_d_dd_u_i.c print_p.c print_s.c \
 			print_x_xx_o_modulo.c apply_precision_d.c apply_flags_d.c \
+			apply_min_size_x.c
 
 
 LIB_NAME = 	ft_atoi.c ft_itoa.c ft_isdigit.c ft_strlen.c ft_memalloc.c \
@@ -40,7 +41,7 @@ LIB_NAME = 	ft_atoi.c ft_itoa.c ft_isdigit.c ft_strlen.c ft_memalloc.c \
 			add_frontchar.c add_nendchar.c ft_itoa_base.c ft_litoa_base.c \
 			ft_strjoin_f.c ft_strcat.c ft_strcmp.c ft_strdup_f.c ft_uitoa.c \
 			ft_uitoa_base.c ft_ulitoa_base.c ft_strnotchr.c ft_strjoin.c \
-			ft_strstr.c ft_isalpha.c ft_isalpha_but.c \
+			ft_strstr.c ft_isalpha.c ft_isalpha_but.c ft_strtrim.c \
 
 INC_NAME = ft_printf.h
 

@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:31 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 22:52:14 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 13:43:35 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int				ft_printf(const char *str, ...);
 char			*apply_flags(t_pm *s, char *str);
 char			*apply_flags_d(t_pm *s, char *str);
 char			*apply_min_size(t_pm *s, char *str);
+char			*apply_min_size_x(t_pm *s, char *str);
 char			*apply_precision(t_pm *s, char *str);
 char			*apply_precision_d(t_pm *s, char *str);
 char			*get_size_modified(t_pm *s, void *elem, char c);
@@ -62,6 +63,7 @@ void			ft_putchar(char c);
 char			*ft_uitoa(uintmax_t n);
 void			ft_putstr(char const *s);
 char			*ft_strdup(const char *s);
+char			*ft_strtrim(char const *s);
 void			*ft_memalloc(size_t size);
 int				ft_strlen(const char *src);
 void			pf_putstr(t_pm *s, char *str);
