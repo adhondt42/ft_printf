@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:17:48 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:17:55 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 20:54:14 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,25 @@ void			init_f(void (*f[14])(t_pm *, void *))
 	f[12] = print_c;
 	f[13] = nada;
 	f[14] = print_modulo;
+}
+
+int			test(t_pm *s, void *elem)
+{
+	int	bouh;
+
+	if (s->size_modif == 'H')
+		bouh = (unsigned char)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'h')
+		bouh = (unsigned short)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'L')
+		bouh = (unsigned long long)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'l')
+		bouh = (unsigned long)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'j')
+		bouh = (uintmax_t)elem == 0 ? 0 : 1;
+	else if (s->size_modif == 'z')
+		bouh = (size_t)elem == 0 ? 0 : 1;
+	else
+		bouh = (int)elem == 0 ? 0 : 1;
+	return (bouh);
 }

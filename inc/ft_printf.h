@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 12:15:31 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 17:50:48 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 20:55:17 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ char			*apply_min_size_x(t_pm *s, char *str);
 char			*apply_precision(t_pm *s, char *str);
 char			*apply_precision_d(t_pm *s, char *str);
 char			*get_size_modified(t_pm *s, void *elem, char c);
+int				test(t_pm *s, void *elem);
 void			init_s(t_pm **s);
 void			init_f(void (*f[14])(t_pm *, void *));
 char			get_spec(t_pm *s, char *str, int i, int *xpt);
@@ -75,6 +76,7 @@ int				ft_isalpha_but(int c, char *str);
 char			*ft_strnotchr(const char *s, int c);
 void			*ft_memset(void *s, int c, size_t n);
 char			*ft_strdup_f(const char *s, char *str);
+int				inteq(int a, int b, int c, int ref);
 char			*ft_strcpy(char *dest, const char *str);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*add_nfrontchar(char *str, char c, size_t n);

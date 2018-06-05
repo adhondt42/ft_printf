@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:18:05 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 13:42:17 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 20:43:13 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,7 @@ char		*apply_min_size(t_pm *s, char *str)
 		}
 	}
 	else
-		ret = (s->min_size - ft_strlen(str) > 0) ?
-			add_nendchar(str, ' ', s->min_size - ft_strlen(str)) :
-			ft_strdup(str);
+		ret = (s->min_size - ft_strlen(str) > 0) ? add_nendchar(str, ' ',
+				s->min_size - ft_strlen(str)) : ft_strdup(str);
 	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 21:20:22 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 17:07:35 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/06/05 20:55:15 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,27 +35,6 @@ char		*add_ox(char *str, char c)
 	ft_strcpy(ret + j + 2, str + i);
 	free(str);
 	return (ret);
-}
-
-int			test(t_pm *s, void *elem)
-{
-	int	bouh;
-
-	if (s->size_modif == 'H')
-		bouh = (unsigned char)elem == 0 ? 0 : 1;
-	else if (s->size_modif == 'h')
-		bouh = (unsigned short)elem == 0 ? 0 : 1;
-	else if (s->size_modif == 'L')
-		bouh = (unsigned long long)elem == 0 ? 0 : 1;
-	else if (s->size_modif == 'l')
-		bouh = (unsigned long)elem == 0 ? 0 : 1;
-	else if (s->size_modif == 'j')
-		bouh = (uintmax_t)elem == 0 ? 0 : 1;
-	else if (s->size_modif == 'z')
-		bouh = (size_t)elem == 0 ? 0 : 1;
-	else
-		bouh = (int)elem == 0 ? 0 : 1;
-	return (bouh);
 }
 
 void		print_x(t_pm *s, void *elem)

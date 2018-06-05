@@ -6,7 +6,7 @@
 #    By: adhondt <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 21:33:32 by adhondt           #+#    #+#              #
-#    Updated: 2018/06/05 18:39:28 by adhondt          ###   ########.fr        #
+#    Updated: 2018/06/05 20:15:59 by adhondt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ LIB_NAME = 	ft_atoi.c ft_itoa.c ft_isdigit.c ft_strlen.c ft_memalloc.c \
 			add_frontchar.c add_nendchar.c ft_itoa_base.c ft_litoa_base.c \
 			ft_strjoin_f.c ft_strcat.c ft_strcmp.c ft_strdup_f.c ft_uitoa.c \
 			ft_uitoa_base.c ft_ulitoa_base.c ft_strnotchr.c ft_strjoin.c \
-			ft_strstr.c ft_isalpha.c ft_isalpha_but.c ft_strtrim.c \
+			ft_strstr.c ft_isalpha.c ft_isalpha_but.c ft_strtrim.c ft_intequ.c \
 
 INC_NAME = ft_printf.h
 
