@@ -15,6 +15,4 @@ char *str;
 */
 	ft_printf("%%d Lydie == |%d|", 503);
 	ft_printf("\n");
-	printf("%%d Lydie == |%d|", 503);
-
 }
