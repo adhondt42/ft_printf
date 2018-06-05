@@ -55,6 +55,6 @@ int j;
 	printf("-% -5.0i|\n", 42);
 	ft_printf("-% -5.0i|\n", 42);
 */
-	ft_printf("-% .0i-\n", 0);
-	printf("-% .0i-\n", 0);
+	ft_printf("-% +0.0i-\n", 0);
+	printf("-% +0.0i-\n", 0);
 }
