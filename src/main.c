@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/26 12:15:41 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/05 20:55:19 by adhondt          ###   ########.fr       */
+/*   Created: 2018/06/12 18:12:33 by adhondt           #+#    #+#             */
+/*   Updated: 2018/06/12 19:34:14 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,12 @@ int			ft_run(const char *str, void *elem, int *ret)
 	return (xpt);
 }
 
+void		ft_print(int *ret, char c)
+{
+	ft_putchar(c);
+	*ret += 1;
+}
+
 int			ft_printf(const char *str, ...)
 {
 	int		i;
@@ -80,7 +86,7 @@ int			ft_printf(const char *str, ...)
 				i++;
 		}
 		else
-			(ret++) ? ft_putchar(str[i]) : ft_putchar(str[i]);
+			ft_print(&ret, str[i]);
 	}
 	return (ret);
 }
